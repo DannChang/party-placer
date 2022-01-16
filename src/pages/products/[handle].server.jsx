@@ -15,6 +15,10 @@ export default function Product({country = {isoCode: 'US'}}) {
       country: country.isoCode,
       handle,
     },
+    cache: {
+      maxAge: 60,
+      staleWhileRevalidate: 90,
+    },
   });
 
   if (!data.product) {
