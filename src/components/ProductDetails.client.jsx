@@ -7,6 +7,8 @@ import {
   BUTTON_PRIMARY_CLASSES,
   BUTTON_SECONDARY_CLASSES,
 } from './Button.client';
+// import arbutton from '@leoncvlt/ar-button';
+// this.console.log(arbutton);
 
 /**
  * A client component that displays detailed information about a product to allow buyers to make informed decisions
@@ -34,12 +36,40 @@ function ProductPriceMarkup() {
   );
 }
 
+// function createARButton() {
+//   return {
+//     __html: `<ar-button
+//   src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.glb"
+//   ios-src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.usdz"
+//   link="https://www.nasa.gov/"
+//   title="A 3D model of an astronaut">
+//     See in Augmented Reality
+// </ar-button>`,
+//   };
+// }
+
 function AddToCartMarkup() {
   const {selectedVariant} = useProduct();
   const isOutOfStock = !selectedVariant.availableForSale;
 
   return (
     <div className="space-y-2 mb-8">
+      {/* Add AR/VR Button Here */}
+      {/* <div dangerouslySetInnerHTML={createARButton()} />
+       */}
+      {/* <ar-button
+        src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.glb"
+        ios-src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.usdz"
+        link="https://www.nasa.gov/"
+        title="A 3D model of an astronaut"
+      >
+        See in Augmented Reality
+      </ar-button> */}
+      <div className="flex content-center justify-center w-12 h-12 pt-3 bg-indigo-500 rounded-lg ">
+        <a rel="ar" href="/assets/models/test/Blackjack_Table.usdz">
+          AR
+        </a>
+      </div>
       <Product.SelectedVariant.AddToCartButton
         className={BUTTON_PRIMARY_CLASSES}
         disabled={isOutOfStock}
@@ -106,6 +136,10 @@ function SizeChart() {
     </>
   );
 }
+
+// function ModelViewer(params) {
+//   const {media, selectedVariant, selectedOptions} = useProductOptions;
+// }
 
 export default function ProductDetails({product}) {
   const initialVariant = flattenConnection(product.variants)[0];

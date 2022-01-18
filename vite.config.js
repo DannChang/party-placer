@@ -7,4 +7,7 @@ import shopifyConfig from './shopify.config';
 export default defineConfig({
   plugins: [hydrogen(shopifyConfig, {devCache: true})],
   optimizeDeps: {include: ['@headlessui/react']},
+  server: {
+    host: true,
+  },
 });
