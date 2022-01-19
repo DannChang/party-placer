@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Model Viewer</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
   </head>
   <body>
     <model-viewer
-      alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+      class="model"
+      alt="casino table"
       src="../public/assets/models/test/casino-table.glb"
+      ios-src="../public/assests/models/test/Blackhjack_Table.usdz"
+      xr-environment
       ar
       ar-modes="webxr scene-viewer quick-look"
-      environment-image="shared-assets/environments/moon_1k.hdr"
-      poster="shared-assets/models/NeilArmstrong.webp"
-      seamless-poster
-      shadow-intensity="1"
+      shadow-intensity="0.5"
+      auto-rotate
       camera-controls
-    ></model-viewer>
+    >
+      <!-- <button slot="ar-button" class="ar-button"></button> -->
+    </model-viewer>
   </body>
   <script
     type="module"
