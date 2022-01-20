@@ -2,10 +2,11 @@ import {
   useProduct,
   MediaFile,
   SelectedVariantImage,
+  Image,
 } from '@shopify/hydrogen/client';
 
 // import model from '../models/casino-table.glb';
-
+import './gallery.css';
 /**
  * A client component that defines a media gallery for hosting images, 3D models, and videos of products
  */
@@ -45,8 +46,16 @@ export default function Gallery() {
         auto-rotate
         camera-controls
         xr-environment
-        className="w-[80vw] md:w-auto h-full md:h-auto object-cover object-center transition-all snap-start border border-gray-200 flex-shrink-0 rounded-lg"
-      ></model-viewer>
+      >
+        <button slot="ar-button" className="ar-button">
+          <Image
+            src="../ar-icon.png"
+            alt="ar-icon"
+            width="10px"
+            height="10px"
+          />
+        </button>
+      </model-viewer>
       {galleryMedia.map((med) => {
         let extraProps = {};
 
