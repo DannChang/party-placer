@@ -4,6 +4,8 @@ import {
   SelectedVariantImage,
 } from '@shopify/hydrogen/client';
 
+// import model from '../models/casino-table.glb';
+
 /**
  * A client component that defines a media gallery for hosting images, 3D models, and videos of products
  */
@@ -33,6 +35,18 @@ export default function Gallery() {
       tabIndex="-1"
     >
       <SelectedVariantImage className="w-[80vw] md:w-full h-full md:h-auto object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg" />
+      <model-viewer
+        alt="casino table"
+        src="../casino-table.glb"
+        ios-src="../Blackjack_Table.usdz"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        shadow-intensity="0.5"
+        auto-rotate
+        camera-controls
+        xr-environment
+        className="w-[80vw] md:w-auto h-full md:h-auto object-cover object-center transition-all snap-start border border-gray-200 flex-shrink-0 rounded-lg"
+      ></model-viewer>
       {galleryMedia.map((med) => {
         let extraProps = {};
 

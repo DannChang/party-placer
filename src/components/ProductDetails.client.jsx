@@ -1,6 +1,11 @@
 import {Product, flattenConnection, useProduct} from '@shopify/hydrogen/client';
 
-import ProductOptions from './ProductOptions.client';
+// import {useShopQuery, ProductProviderFragment} from '@shopify/hydrogen';
+
+// import gql from 'graphql-tag';
+
+// import ProductCard from './ProductCard';
+// import ProductOptions from './ProductOptions.client';
 import Gallery from './Gallery.client';
 import Seo from './Seo.client';
 import {
@@ -54,27 +59,11 @@ function AddToCartMarkup() {
 
   return (
     <div className="space-y-2 mb-8">
-      {/* Add AR/VR Button Here */}
-      {/* <div dangerouslySetInnerHTML={createARButton()} />
-       */}
-      {/* <ar-button
-        src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.glb"
-        ios-src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.usdz"
-        link="https://www.nasa.gov/"
-        title="A 3D model of an astronaut"
-      >
-        See in Augmented Reality
-      </ar-button> */}
-      <div className="flex content-center justify-center w-12 h-12 pt-3 bg-indigo-500 rounded-lg ">
-        <a rel="ar" href="/assets/models/test/Blackjack_Table.usdz">
-          AR
-        </a>
-      </div>
       <Product.SelectedVariant.AddToCartButton
         className={BUTTON_PRIMARY_CLASSES}
         disabled={isOutOfStock}
       >
-        {isOutOfStock ? 'Out of stock' : 'Add to bag'}
+        {isOutOfStock ? 'Out of stock' : 'Add to Cart'}
       </Product.SelectedVariant.AddToCartButton>
       {isOutOfStock ? (
         <p className="text-black text-center">Available in 2-3 weeks</p>
@@ -144,6 +133,21 @@ function SizeChart() {
 export default function ProductDetails({product}) {
   const initialVariant = flattenConnection(product.variants)[0];
 
+  // const {data} = useShopQuery({
+  //   query: QUERY,
+  //   variables: {
+  //     country: 'US',
+  //     numProductMetafields: 0,
+  //     numProductVariants: 250,
+  //     numProductMedia: 0,
+  //     numProductVariantMetafields: 0,
+  //     numProductVariantSellingPlanAllocations: 0,
+  //     numProductSellingPlanGroups: 0,
+  //     numProductSellingPlans: 0,
+  //   },
+  // });
+  // const products = data ? flattenConnection(data.products) : [];
+
   return (
     <>
       <Seo product={product} />
@@ -182,7 +186,8 @@ export default function ProductDetails({product}) {
             </div>
             {/* Product Options */}
             <div className="mt-8">
-              <ProductOptions />
+              {/* Title and Default Title section */}
+              {/* <ProductOptions /> */}
               <Product.Metafield namespace="my_fields" keyName="size_chart">
                 {({value}) => {
                   return value ? (
@@ -268,6 +273,19 @@ export default function ProductDetails({product}) {
           </div>
         </div>
       </Product>
+      <div className="my-8">
+        <p className="mb-8 text-lg text-black font-medium uppercase">
+          Products you might like
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* <ProductCard /> */}
+          {/* {products.map((product) => (
+            <div key={product.id}>
+              <ProductCard product={product} />
+            </div>
+          ))} */}
+        </div>
+      </div>
     </>
   );
 }

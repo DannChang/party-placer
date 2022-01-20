@@ -32,6 +32,7 @@
     "vite": "^2.7.0"
   },
   "dependencies": {
+    "@google/model-viewer": "^1.10.1",
     "@headlessui/react": "^1.4.1",
     "@leoncvlt/ar-button": "^0.1.2",
     "@shopify/hydrogen": "^0.8.3",
