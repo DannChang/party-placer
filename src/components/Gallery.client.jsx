@@ -39,6 +39,12 @@ export default function Gallery() {
   if (featuredMediaSrc.includes('darts')) {
     modelPath = 'dart-machine';
   }
+  if (featuredMediaSrc.includes('popcorn')) {
+    modelPath = 'popcorn';
+  }
+  if (featuredMediaSrc.includes('projector')) {
+    modelPath = 'projector';
+  }
 
   const galleryMedia = media.filter((med) => {
     if (
@@ -69,6 +75,7 @@ export default function Gallery() {
         poster={`https://storage.googleapis.com/partyplacer-models/${modelPath}.png`}
         ar
         ar-modes="webxr scene-viewer quick-look"
+        skybox-image="https://storage.googleapis.com/partyplacer-models/ballroom.hdr"
         shadow-intensity="0.5"
         auto-rotate
         camera-controls
@@ -88,7 +95,8 @@ export default function Gallery() {
           <MediaFile
             tabIndex="0"
             key={med.id || med.image.id}
-            className="w-[80vw] md:w-auto h-full md:h-auto object-cover object-center transition-all snap-start border border-gray-200 flex-shrink-0 rounded-lg"
+            // className="w-[80vw] md:w-auto h-full md:h-auto object-cover object-center transition-all snap-start border border-gray-200 flex-shrink-0 rounded-lg"
+            className="media-file"
             media={med}
             options={{
               height: '485',
