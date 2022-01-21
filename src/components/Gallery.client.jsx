@@ -11,7 +11,6 @@ import './gallery.css';
  */
 export default function Gallery() {
   const {media, selectedVariant} = useProduct();
-
   const featuredMedia = selectedVariant.image || media[0].image;
   const featuredMediaSrc = featuredMedia.url.split('?')[0];
 
@@ -28,7 +27,7 @@ export default function Gallery() {
   if (featuredMediaSrc.includes('air-hockey')) {
     modelPath = 'air-hockey';
   }
-  if (featuredMediaSrc.includes('bball-arcade')) {
+  if (featuredMediaSrc.includes('bball')) {
     modelPath = 'bball-arcade';
   }
   if (featuredMediaSrc.includes('pacman')) {
@@ -76,15 +75,7 @@ export default function Gallery() {
         xr-environment
         className="3d-viewer"
       >
-        <button slot="ar-button" className="ar-button">
-          View in AR
-          {/* <Image
-            src="../ar-icon.png"
-            alt="ar-icon"
-            width="10px"
-            height="10px"
-          /> */}
-        </button>
+        <button slot="ar-button" className="ar-button"></button>
       </model-viewer>
       {galleryMedia.map((med) => {
         let extraProps = {};

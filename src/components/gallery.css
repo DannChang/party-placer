@@ -1,6 +1,6 @@
 model-viewer {
   background-color: white;
-  min-width: 200px;
+  min-width: 280px;
   min-height: 200px;
   width: auto;
   height: auto;
@@ -11,13 +11,17 @@ model-viewer {
 }
 
 .ar-button {
-  /* background-image: url('../ar-icon.png'); */
-  /* position: absolute;
-  right: 50px;
-  bottom: 15px; */
-  width: 5rem;
-  height: 5rem;
-  background-color: red;
+  background-image: url('../ar-icon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 15px;
+  background-color: lightsteelblue;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.61);
 }
 
 /* @media (min-width: 768px) {

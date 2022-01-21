@@ -41,18 +41,6 @@ function ProductPriceMarkup() {
   );
 }
 
-// function createARButton() {
-//   return {
-//     __html: `<ar-button
-//   src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.glb"
-//   ios-src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.usdz"
-//   link="https://www.nasa.gov/"
-//   title="A 3D model of an astronaut">
-//     See in Augmented Reality
-// </ar-button>`,
-//   };
-// }
-
 function AddToCartMarkup() {
   const {selectedVariant} = useProduct();
   const isOutOfStock = !selectedVariant.availableForSale;
