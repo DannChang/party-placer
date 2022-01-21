@@ -2,7 +2,6 @@ import {
   useProduct,
   MediaFile,
   SelectedVariantImage,
-  Image,
 } from '@shopify/hydrogen/client';
 
 // import model from '../models/casino-table.glb';
@@ -15,6 +14,33 @@ export default function Gallery() {
 
   const featuredMedia = selectedVariant.image || media[0].image;
   const featuredMediaSrc = featuredMedia.url.split('?')[0];
+
+  let modelPath = '';
+  if (featuredMediaSrc.includes('casino-table')) {
+    modelPath = 'casino-table';
+  }
+  if (featuredMediaSrc.includes('roulette')) {
+    modelPath = 'roulette';
+  }
+  if (featuredMediaSrc.includes('pinball')) {
+    modelPath = 'pinball';
+  }
+  if (featuredMediaSrc.includes('air-hockey')) {
+    modelPath = 'air-hockey';
+  }
+  if (featuredMediaSrc.includes('bball-arcade')) {
+    modelPath = 'bball-arcade';
+  }
+  if (featuredMediaSrc.includes('pacman')) {
+    modelPath = 'pacman';
+  }
+  if (featuredMediaSrc.includes('racing-arcade')) {
+    modelPath = 'racing-arcade';
+  }
+  if (featuredMediaSrc.includes('darts')) {
+    modelPath = 'dart-machine';
+  }
+
   const galleryMedia = media.filter((med) => {
     if (
       med.mediaContentType === MODEL_3D_TYPE ||
@@ -36,24 +62,28 @@ export default function Gallery() {
       tabIndex="-1"
     >
       <SelectedVariantImage className="w-[80vw] md:w-full h-full md:h-auto object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg" />
+      {/* Adjust CORS config here: https://cloud.google.com/storage/docs/configuring-cors#gsutil */}
       <model-viewer
         alt="casino table"
-        src="../casino-table.glb"
-        ios-src="../Blackjack_Table.usdz"
+        src={`https://storage.googleapis.com/partyplacer-models/${modelPath}.glb`}
+        ios-src={`https://storage.googleapis.com/partyplacer-models/${modelPath}.usdz`}
+        poster={`https://storage.googleapis.com/partyplacer-models/${modelPath}.png`}
         ar
         ar-modes="webxr scene-viewer quick-look"
         shadow-intensity="0.5"
         auto-rotate
         camera-controls
         xr-environment
+        className="3d-viewer"
       >
         <button slot="ar-button" className="ar-button">
-          <Image
+          View in AR
+          {/* <Image
             src="../ar-icon.png"
             alt="ar-icon"
             width="10px"
             height="10px"
-          />
+          /> */}
         </button>
       </model-viewer>
       {galleryMedia.map((med) => {

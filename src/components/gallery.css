@@ -1,6 +1,7 @@
 model-viewer {
   background-color: white;
-
+  min-width: 200px;
+  min-height: 200px;
   width: auto;
   height: auto;
   border-radius: 10px;
@@ -11,12 +12,12 @@ model-viewer {
 
 .ar-button {
   /* background-image: url('../ar-icon.png'); */
-  position: absolute;
+  /* position: absolute;
   right: 50px;
-  bottom: 15px;
+  bottom: 15px; */
   width: 5rem;
   height: 5rem;
-  /* background-color: red; */
+  background-color: red;
 }
 
 /* @media (min-width: 768px) {
