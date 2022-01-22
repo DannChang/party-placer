@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Link} from '@shopify/hydrogen/client';
+import {Link, Image} from '@shopify/hydrogen/client';
 
 import CartToggle from './CartToggle.client';
 import CurrencySelector from './CurrencySelector.client';
@@ -20,26 +20,26 @@ export default function Header({collections, storeName}) {
         }`}
       >
         <div className="h-full flex lg:flex-col place-content-between">
-          <div className="text-center w-full flex justify-between items-center">
-            <CurrencySelector />
+          <div className="h-full text-center w-full flex justify-between items-center">
             <MobileNavigation
               collections={collections}
               isOpen={isMobileNavOpen}
               setIsOpen={setIsMobileNavOpen}
             />
-            <Link
-              className="font-black uppercase text-3xl tracking-widest"
-              to="/"
-            >
-              {storeName}
+            <Link to="/">
+              {/* {storeName} */}
+              <Image src="../pp-logo.png" width="200px" height="100px" />
             </Link>
-            <CartToggle
-              handleClick={() => {
-                if (isMobileNavOpen) setIsMobileNavOpen(false);
-              }}
-            />
+            <Navigation collections={collections} storeName={storeName} />
+            <div className="flex">
+              <CurrencySelector />
+              <CartToggle
+                handleClick={() => {
+                  if (isMobileNavOpen) setIsMobileNavOpen(false);
+                }}
+              />
+            </div>
           </div>
-          <Navigation collections={collections} storeName={storeName} />
         </div>
       </div>
     </header>

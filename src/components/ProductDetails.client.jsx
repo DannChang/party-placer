@@ -10,7 +10,7 @@ import Gallery from './Gallery.client';
 import Seo from './Seo.client';
 import {
   BUTTON_PRIMARY_CLASSES,
-  BUTTON_SECONDARY_CLASSES,
+  // BUTTON_SECONDARY_CLASSES,
 } from './Button.client';
 // import arbutton from '@leoncvlt/ar-button';
 // this.console.log(arbutton);
@@ -53,7 +53,7 @@ function AddToCartMarkup() {
       >
         {isOutOfStock ? 'Out of stock' : 'Add to Cart'}
       </Product.SelectedVariant.AddToCartButton>
-      {isOutOfStock ? (
+      {/* {isOutOfStock ? (
         <p className="text-black text-center">Available in 2-3 weeks</p>
       ) : (
         <Product.SelectedVariant.BuyNowButton
@@ -61,7 +61,7 @@ function AddToCartMarkup() {
         >
           Buy it now
         </Product.SelectedVariant.BuyNowButton>
-      )}
+      )} */}
     </div>
   );
 }
@@ -175,7 +175,7 @@ export default function ProductDetails({product}) {
             {/* Product Options */}
             <div className="mt-8">
               {/* Title and Default Title section */}
-              {/* <ProductOptions /> */}
+              {/* <ProductOptions className="product-options" /> */}
               <Product.Metafield namespace="my_fields" keyName="size_chart">
                 {({value}) => {
                   return value ? (
