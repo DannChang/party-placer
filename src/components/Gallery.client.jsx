@@ -45,6 +45,9 @@ export default function Gallery() {
   if (featuredMediaSrc.includes('projector')) {
     modelPath = 'projector';
   }
+  if (featuredMediaSrc.includes('ddr')) {
+    modelPath = 'ddr';
+  }
 
   const galleryMedia = media.filter((med) => {
     if (

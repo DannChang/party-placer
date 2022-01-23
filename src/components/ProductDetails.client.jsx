@@ -12,8 +12,6 @@ import {
   BUTTON_PRIMARY_CLASSES,
   // BUTTON_SECONDARY_CLASSES,
 } from './Button.client';
-// import arbutton from '@leoncvlt/ar-button';
-// this.console.log(arbutton);
 
 /**
  * A client component that displays detailed information about a product to allow buyers to make informed decisions

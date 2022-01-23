@@ -11,7 +11,7 @@ export default function Navigation({collections}) {
           <li key={collection.id}>
             <Link
               to={`/collections/${collection.handle}`}
-              className="block  p-2 mx-2  rounded-lg  hover:opacity-80 hover:bg-indigo-500 hover:text-slate-100"
+              className="block  p-2 mx-2  rounded-lg  hover:opacity-80 hover:bg-indigo-500 hover:text-slate-100 active:bg-indigo-700 focus:outline-none focus:ring focus:ring-violet-300"
             >
               {collection.title}
             </Link>
