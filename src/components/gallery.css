@@ -1,13 +1,19 @@
+/* @media (max-width: 768px) {
+  model-viewer {
+    width: 100vw;
+  }
+} */
+
 model-viewer {
-  background-color: white;
+  /* background-color: white; */
   min-width: 280px;
-  min-height: 200px;
-  width: auto;
+  min-height: 465px;
+  /* width: auto;
   height: auto;
   border-radius: 10px;
   border: 1px solid rgb(229 231 235);
   scroll-snap-type: x mandatory;
-  scroll-snap-align: start;
+  scroll-snap-align: start; */
 }
 
 .ar-button {
@@ -22,6 +28,11 @@ model-viewer {
   border-radius: 15px;
   background-color: lightsteelblue;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.61);
+}
+
+.ar-button:active {
+  background-color: steelblue;
+  border: lightsteelblue 2px solid;
 }
 
 .media-file {

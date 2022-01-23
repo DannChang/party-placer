@@ -66,10 +66,9 @@ export default function Gallery() {
 
   return (
     <div
-      className="gap-4 flex md:grid md:grid-cols-2 overflow-x-scroll no-scrollbar scroll-snap-x scroll-smooth h-[485px] md:h-auto place-content-start"
+      className="gap-4 flex md:grid md:grid-cols-2 overflow-x-scroll md:no-scrollbar scroll-snap-x scroll-smooth h-[485px] md:h-auto place-content-start "
       tabIndex="-1"
     >
-      <SelectedVariantImage className="w-[80vw] md:w-full h-full md:h-auto object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg" />
       {/* Adjust CORS config here: https://cloud.google.com/storage/docs/configuring-cors#gsutil */}
       <model-viewer
         alt="casino table"
@@ -83,10 +82,11 @@ export default function Gallery() {
         auto-rotate
         camera-controls
         xr-environment
-        className="3d-viewer"
+        class="w-[80vw] md:w-full h-full md:h-auto md:min-h-24 object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg"
       >
         <button slot="ar-button" className="ar-button"></button>
       </model-viewer>
+      <SelectedVariantImage className="w-[80vw] md:w-1/2 h-full md:h-auto object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg" />
       {galleryMedia.map((med) => {
         let extraProps = {};
 

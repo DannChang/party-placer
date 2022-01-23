@@ -156,7 +156,6 @@ export default function ProductDetails({product}) {
           </div>
 
           <Gallery />
-
           <div>
             <div className="hidden md:block">
               <Product.Title
