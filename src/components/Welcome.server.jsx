@@ -17,20 +17,6 @@ function ExternalIcon() {
   );
 }
 
-function DocsButton({url, label}) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      className="bg-white shadow py-2 px-5 rounded-full inline-flex items-center hover:opacity-80"
-      rel="noreferrer"
-    >
-      {label}
-      <ExternalIcon />
-    </a>
-  );
-}
-
 function StorefrontInfo({shopName, totalProducts, totalCollections}) {
   const pluralize = (count, noun, suffix = 's') =>
     `${count} ${noun}${count === 1 ? '' : suffix}`;
@@ -126,36 +112,9 @@ export default function Welcome() {
         <h1 className="font-extrabold mb-4 text-5xl md:text-7xl">
           Welcome to PartyPlacer
         </h1>
-        <model-viewer
-          alt="casino table"
-          src={`https://storage.googleapis.com/partyplacer-models/disco.glb`}
-          ios-src={`https://storage.googleapis.com/partyplacer-models/disco.usdz`}
-          poster={`https://storage.googleapis.com/partyplacer-models/disco.png`}
-          ar
-          ar-modes="webxr scene-viewer quick-look"
-          skybox-image="https://storage.googleapis.com/partyplacer-models/ballroom.hdr"
-          shadow-intensity="0.5"
-          auto-rotate
-          camera-controls
-          xr-environment
-          class="w-[80vw] md:w-full h-64 md:h-auto md:min-h-64 object-cover object-center flex-shrink-0 md:flex-shrink-none snap-start md:col-span-2 border border-gray-200 rounded-lg"
-        >
-          <button slot="ar-button" className="ar-button"></button>
-        </model-viewer>
         <p className="text-lg mb-8">
           {/* Welcome to your custom storefront. Let&rsquo;s get building. */}
         </p>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 text-gray-700">
-          <DocsButton
-            url="https://shopify.dev/custom-storefronts/hydrogen"
-            label="Browse Hydrogen documentation"
-          />
-          <DocsButton url="/graphql" label="Open the GraphiQL explorer" />
-          <DocsButton
-            url="https://github.com/Shopify/hydrogen-examples"
-            label="Explore Hydrogen examples"
-          />
-        </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <StorefrontInfo

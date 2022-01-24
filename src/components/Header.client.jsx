@@ -15,7 +15,7 @@ export default function Header({collections, storeName}) {
   return (
     <header className="h-20 lg:h-32 " role="banner">
       <div
-        className={`fixed z-20 h-20 lg:h-32 w-full border-b border-gray-200 px-6 md:px-8 md:py-6 lg:pt-8 lg:pb-8 mx-auto bg-indigo-200 ${
+        className={`fixed z-20 h-20 lg:h-32 w-full  px-6 mx-auto bg-indigo-200 ${
           isMobileNavOpen ? '' : 'bg-opacity-95'
         }`}
       >
