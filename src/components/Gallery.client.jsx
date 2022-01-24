@@ -71,7 +71,7 @@ export default function Gallery() {
     >
       {/* Adjust CORS config here: https://cloud.google.com/storage/docs/configuring-cors#gsutil */}
       <model-viewer
-        alt="casino table"
+        alt={`${modelPath}`}
         src={`https://storage.googleapis.com/partyplacer-models/${modelPath}.glb`}
         ios-src={`https://storage.googleapis.com/partyplacer-models/${modelPath}.usdz`}
         poster={`https://storage.googleapis.com/partyplacer-models/${modelPath}.png`}
