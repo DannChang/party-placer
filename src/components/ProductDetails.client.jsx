@@ -18,7 +18,7 @@ import {
  */
 function ProductPriceMarkup() {
   return (
-    <div className="flex md:flex-col items-end font-semibold text-lg md:items-start md:mb-4">
+    <div className="flex md:flex-col items-end font-semibold text-2xl md:items-start md:mb-4">
       <Product.SelectedVariant.Price
         priceType="compareAt"
         className="text-gray-500 line-through text-lg mr-2.5"
@@ -150,7 +150,7 @@ export default function ProductDetails({product}) {
               </div>
             )}
             <span />
-            <div className="flex justify-between md:block">
+            <div className="flex justify-between md:block ">
               <ProductPriceMarkup />
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function ProductDetails({product}) {
                   {product.vendor}
                 </div>
               )}
-              <ProductPriceMarkup />
+              <ProductPriceMarkup className="text-2xl" />
             </div>
             {/* Product Options */}
             <div className="mt-8">

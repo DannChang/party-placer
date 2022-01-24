@@ -22,12 +22,15 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
           {isOpen ? <CloseIcon /> : <OpenIcon />}
         </button>
         {isOpen ? (
-          <div className="absolute -left-0 top-20 w-full h-screen z-10 bg-gray-50 px-4 md:px-12 py-7">
+          <div className="absolute -left-0 top-20 w-full h-screen z-10 bg-indigo-100  md:px-12 ">
             <ul>
               {collections.map((collection) => (
-                <li className="border-b border-gray-200" key={collection.id}>
+                <li
+                  className="border-b border-gray-200 px-4 hover:bg-indigo-300 active:bg-indigo-700"
+                  key={collection.id}
+                >
                   <Link
-                    className="group py-5 text-gray-700 flex items-center justify-between"
+                    className="group py-5 text-gray-700 hover:text-gray-50 flex items-center justify-between"
                     to={`/collections/${collection.handle}`}
                     onClick={() => setIsOpen(false)}
                   >
