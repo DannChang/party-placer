@@ -112,27 +112,8 @@ function SizeChart() {
   );
 }
 
-// function ModelViewer(params) {
-//   const {media, selectedVariant, selectedOptions} = useProductOptions;
-// }
-
 export default function ProductDetails({product}) {
   const initialVariant = flattenConnection(product.variants)[0];
-
-  // const {data} = useShopQuery({
-  //   query: QUERY,
-  //   variables: {
-  //     country: 'US',
-  //     numProductMetafields: 0,
-  //     numProductVariants: 250,
-  //     numProductMedia: 0,
-  //     numProductVariantMetafields: 0,
-  //     numProductVariantSellingPlanAllocations: 0,
-  //     numProductSellingPlanGroups: 0,
-  //     numProductSellingPlans: 0,
-  //   },
-  // });
-  // const products = data ? flattenConnection(data.products) : [];
 
   return (
     <>
@@ -258,19 +239,6 @@ export default function ProductDetails({product}) {
           </div>
         </div>
       </Product>
-      <div className="my-8">
-        <p className="mb-8 text-lg text-black font-medium uppercase">
-          Products you might like
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* <ProductCard /> */}
-          {/* {products.map((product) => (
-            <div key={product.id}>
-              <ProductCard product={product} />
-            </div>
-          ))} */}
-        </div>
-      </div>
     </>
   );
 }

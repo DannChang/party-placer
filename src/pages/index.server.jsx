@@ -99,7 +99,7 @@ export default function Index({country = {isoCode: 'US'}}) {
                     to={`/collections/${featuredProductsCollection.handle}`}
                     className="text-blue-600 hover:underline"
                   >
-                    Shop all
+                    Browse all
                   </Link>
                 </span>
               </div>
@@ -115,7 +115,7 @@ export default function Index({country = {isoCode: 'US'}}) {
                   to={`/collections/${featuredCollection.handle}`}
                   className="text-blue-600"
                 >
-                  Shop all
+                  Browse all
                 </Link>
               </div>
             </>
