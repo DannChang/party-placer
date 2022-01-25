@@ -9,13 +9,14 @@ export default function Welcome() {
     <div className="text-gray-900 pt-16 rounded-[40px] md:my-12 px-4 xl:px-12 bg-gradient-to-b from-indigo-800 -mx-4 xl:-mx-12">
       <div className="text-center mb-16">
         <div className="h-96 bg-indigo-200 flex flex-col justify-center text-center rounded-2xl">
-          <h1 className="font-syncopate font-semibold uppercase text-4xl mt-4">
+          <h1 className="font-syncopate font-semibold uppercase text-4xl mt-4 mx-4">
             Plan your party in AR
           </h1>
           <p className=" pt-4 mx-4">
             We simplify your party planning experience by giving you the ability
             to view the product in augmented reality before ordering.
           </p>
+
           <div>
             <Button
               className="font-bai font-semibold w-1/2 mx-auto md:w-96 mt-4 rounded-lg bg-purple-400 hover:bg-purple-500"

@@ -36,7 +36,7 @@ export default function Index({country = {isoCode: 'US'}}) {
               <div className="flex justify-between items-center mb-8 text-md font-medium">
                 <span className="font-syncopate font-bold text-2xl md:text-4xl text-white uppercase">
                   {/* {featuredProductsCollection.title} */}
-                  Featured Products
+                  Featured Rentals
                 </span>
 
                 <Button
