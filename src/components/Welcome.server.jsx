@@ -19,7 +19,7 @@ export default function Welcome() {
           <div>
             <Button
               className="font-bai font-semibold w-1/2 mx-auto md:w-96 mt-4 rounded-lg bg-purple-400 hover:bg-purple-500"
-              url="/all-products"
+              url="/collections/frontpage"
               label="Explore Now"
             />
           </div>

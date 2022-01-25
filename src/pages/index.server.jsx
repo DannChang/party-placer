@@ -41,7 +41,7 @@ export default function Index({country = {isoCode: 'US'}}) {
 
                 <Button
                   className="hidden md:inline-flex font-bai bg-fuchsia-400 hover:bg-fuchsia-500 active:bg-fuchsia-700 text-white font-semibold w-1/2 mx-auto md:w-96 mt-4 rounded-lg"
-                  url="/all-products"
+                  url="/collections/frontpage"
                   label="View All"
                 />
               </div>
@@ -54,7 +54,7 @@ export default function Index({country = {isoCode: 'US'}}) {
               </div>
               <Button
                 className="md:hidden font-bai font-semibold text-center bg-fuchsia-400 hover:bg-fuchsia-500 active:bg-fuchsia-700 rounded-lg"
-                url="/all-products"
+                url="/collections/frontpage"
                 label="View All"
               />
             </>
