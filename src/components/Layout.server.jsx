@@ -40,7 +40,7 @@ export default function Layout({children, hero}) {
           Skip to content
         </a>
       </div>
-      <div className="min-h-screen max-w-screen text-gray-700 font-sans">
+      <div className="font-bai min-h-screen max-w-screen text-gray-700">
         <Header collections={collections} storeName={storeName} />
         <div>
           {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
@@ -52,7 +52,7 @@ export default function Layout({children, hero}) {
           />
           <Cart />
         </div>
-        <main role="main" id="mainContent" className="relative bg-gray-50">
+        <main role="main" id="mainContent" className="relative bg-indigo-50">
           {hero}
           <div className="mx-auto max-w-7xl p-4 md:py-5 md:px-8">
             {children}

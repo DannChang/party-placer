@@ -1,19 +1,6 @@
-/* @media (max-width: 768px) {
-  model-viewer {
-    width: 100vw;
-  }
-} */
-
 model-viewer {
-  /* background-color: white; */
   min-width: 280px;
   min-height: 465px;
-  /* width: auto;
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid rgb(229 231 235);
-  scroll-snap-type: x mandatory;
-  scroll-snap-align: start; */
 }
 
 .ar-button {

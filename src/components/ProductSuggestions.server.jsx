@@ -25,7 +25,7 @@ export default function NotFound({country = {isoCode: 'US'}}) {
 
   return (
     <div className="my-8">
-      <p className="mb-8 text-lg text-black font-medium uppercase">
+      <p className="mb-8 text-4xl font-bold text-black uppercase">
         You may also like
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

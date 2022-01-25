@@ -2,6 +2,10 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        syncopate: "'Syncopate', sans-serif",
+        bai: "'Bai Jamjuree', sans-serif",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

@@ -26,11 +26,11 @@ export default function MobileNavigation({collections, isOpen, setIsOpen}) {
             <ul>
               {collections.map((collection) => (
                 <li
-                  className="border-b border-gray-200 px-4 hover:bg-indigo-300 active:bg-indigo-700"
+                  className="font-syncopate uppercase text-2xl font-bold px-4 hover:bg-indigo-300 active:bg-indigo-700"
                   key={collection.id}
                 >
                   <Link
-                    className="group py-5 text-gray-700 hover:text-gray-50 flex items-center justify-between"
+                    className="group py-8 text-gray-700 hover:text-gray-50 flex items-center justify-between"
                     to={`/collections/${collection.handle}`}
                     onClick={() => setIsOpen(false)}
                   >

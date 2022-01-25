@@ -13,7 +13,7 @@ export default function Header({collections, storeName}) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   return (
-    <header className="h-20 lg:h-32 " role="banner">
+    <header className="font-bai h-20 lg:h-32 " role="banner">
       <div
         className={`fixed z-20 h-20 lg:h-32 w-full  px-6 mx-auto bg-indigo-200 ${
           isMobileNavOpen ? '' : 'bg-opacity-95'

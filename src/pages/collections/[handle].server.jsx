@@ -37,7 +37,7 @@ export default function Collection({
 
   return (
     <Layout>
-      <h1 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6 mt-6">
+      <h1 className="font-syncopate uppercase font-bold text-4xl md:text-5xl text-gray-900 mb-6 mt-6">
         {collection.title}
       </h1>
       <RawHtml string={collection.descriptionHtml} className="text-lg" />

@@ -1,3 +1,4 @@
+import {Image} from '@shopify/hydrogen';
 import CartIcon from './CartIcon';
 import OpenIcon from './OpenIcon';
 
@@ -13,10 +14,12 @@ export default function LoadingFallback() {
             <div className="hidden lg:block w-16" />
             <div className="lg:hidden flex justify-center items-center w-7 h-full">
               <OpenIcon />
+              <Image
+                src="https://storage.googleapis.com/partyplacer-models/pp-logo.png"
+                width="200"
+                height="150"
+              />
             </div>
-            <p className="font-black uppercase text-3xl tracking-widest">
-              PartyPlacer
-            </p>
             <CartIcon />
           </div>
         </div>

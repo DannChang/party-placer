@@ -5,13 +5,13 @@ import {Link} from '@shopify/hydrogen/client';
  */
 export default function Navigation({collections}) {
   return (
-    <nav className="hidden lg:block text-center">
-      <ul className="md:flex items-center justify-center">
+    <nav className="hidden lg:block text-center ">
+      <ul className="md:flex items-center justify-center ">
         {collections.map((collection) => (
           <li key={collection.id}>
             <Link
               to={`/collections/${collection.handle}`}
-              className="block px-4 py-2 mx-10  hover:rounded-full hover:bg-indigo-500 hover:opacity-80 hover:text-slate-100 active:bg-indigo-700 focus:outline-none focus:ring focus:ring-violet-300"
+              className="font-syncopate uppercase block px-4 py-2 mx-10 text-md font-semibold hover:rounded-lg hover:text-cyan-400  hover:bg-indigo-500 active:bg-indigo-700  "
             >
               {collection.title}
             </Link>

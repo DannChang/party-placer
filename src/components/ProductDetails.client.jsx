@@ -1,11 +1,5 @@
 import {Product, flattenConnection, useProduct} from '@shopify/hydrogen/client';
 
-// import {useShopQuery, ProductProviderFragment} from '@shopify/hydrogen';
-
-// import gql from 'graphql-tag';
-
-// import ProductCard from './ProductCard';
-// import ProductOptions from './ProductOptions.client';
 import Gallery from './Gallery.client';
 import Seo from './Seo.client';
 import {
@@ -44,7 +38,7 @@ function AddToCartMarkup() {
   const isOutOfStock = !selectedVariant.availableForSale;
 
   return (
-    <div className="space-y-2 mb-8">
+    <div className="space-y-2 mb-8 ">
       <Product.SelectedVariant.AddToCartButton
         className={BUTTON_PRIMARY_CLASSES}
         disabled={isOutOfStock}
@@ -119,11 +113,11 @@ export default function ProductDetails({product}) {
     <>
       <Seo product={product} />
       <Product product={product} initialVariantId={initialVariant.id}>
-        <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-x-8 my-16">
+        <div className=" grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-x-8 my-16">
           <div className="md:hidden mt-5 mb-8">
             <Product.Title
               as="h1"
-              className="text-4xl font-bold text-black mb-4"
+              className="font-syncopate uppercase text-4xl font-bold text-black mb-4"
             />
             {product.vendor && (
               <div className="text-sm font-medium mb-2 text-gray-900">
