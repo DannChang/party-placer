@@ -48,6 +48,12 @@ export default function Gallery() {
   if (featuredMediaSrc.includes('ddr')) {
     modelPath = 'ddr';
   }
+  if (featuredMediaSrc.includes('castle')) {
+    modelPath = 'castle';
+  }
+  if (featuredMediaSrc.includes('disco')) {
+    modelPath = 'disco';
+  }
 
   const galleryMedia = media.filter((med) => {
     if (

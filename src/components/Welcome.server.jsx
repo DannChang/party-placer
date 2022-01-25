@@ -16,7 +16,6 @@ export default function Welcome() {
             We simplify your party planning experience by giving you the ability
             to view the product in augmented reality before ordering.
           </p>
-
           <div>
             <Button
               className="font-bai font-semibold w-1/2 mx-auto md:w-96 mt-4 rounded-lg bg-purple-400 hover:bg-purple-500"
@@ -30,14 +29,24 @@ export default function Welcome() {
             How does it work?
           </h2>
           <div className=" flex  md:ml-1/3 md:justify-center h-96">
-            <p className=" w-1/2 md:w-1/3 h-80  md:h-3/5 xl:h-2/5 my-24  mr-4 text-slate-100 md:text-xl bg-sky-500  md:ml-16 md:mb-16 p-4 lg:pt-12 xl:pt-4 rounded-xl z-10 drop-shadow-2xl">
-              At PartyPlacer, all you have to do is open your mobile device (iOS
-              or Android) and click on the AR button located on the bottom of
-              the product.
+            <p className="flex flex-col md:flex-row md:justify-between content-center w-1/2 md:w-2/5 h-80 md:h-2/3  my-24  mr-4 text-slate-100 md:text-xl bg-sky-500  md:ml-16 md:mb-16 p-4 md:pt-8 lg:pt-12  rounded-xl z-10 drop-shadow-2xl overflow-hidden">
+              Go to your mobile device and click on a product&apos;s AR button.
+              <Image
+                className="md:hidden  bg-blue-300 rounded-xl mt-6"
+                src="./ar-icon.png"
+                width="100"
+                height="100"
+              ></Image>
+              <Image
+                className="hidden md:block w-36"
+                src="./qr-code.png"
+                width="100"
+                height="100"
+              ></Image>
             </p>
             <Image
               // className="absolute left-48"
-              className=" w-48 h-80  z-0 bg-sky-600 rounded-xl lg:bg-none drop-shadow-2xl"
+              className=" w-48 h-80  z-0 bg-sky-600 rounded-xl drop-shadow-2xl"
               src="https://storage.googleapis.com/partyplacer-models/ar-demo.png"
               width="400"
               height="400"
