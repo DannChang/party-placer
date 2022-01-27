@@ -7,6 +7,7 @@ PartyPlacer allows you to view party rental items in AR before ordering online.
 The goal of introducing AR is to bridge the gap between what is _digital_ and what is _real_ by casting the product in the space around you.
 ## Demo
 [Live Link](https://partyplacer.herokuapp.com/)
+
 ![ar-demo](https://user-images.githubusercontent.com/27746994/151290720-01ead939-447c-4baf-83ac-fbbd19e191cb.png)
 
 ## Getting started
