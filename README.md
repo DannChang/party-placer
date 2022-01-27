@@ -4,7 +4,8 @@ Planning a party and knowing where to place entertainment items can be difficult
 
 PartyPlacer allows you to view party rental items in AR before ordering online. 
 
-The goal of introducing AR is to bridge the gap between what is _digital_ and what is _real_ by casting the product in the space around you.
+The goal of introducing AR is to bridge the gap between what is _digital_ and what is _real_ by casting the product in the space around you. As a result, improves customer confidence in making a purchasing decision for large items like furniture online. 
+
 ## Demo
 [Live Link (Best viewed on Mobile)](https://partyplacer.herokuapp.com/)
 
