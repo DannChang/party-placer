@@ -15,7 +15,6 @@ The goal of introducing AR is to bridge the gap between what is _digital_ and wh
 **Requirements:**
 
 - Node v14+
-- npm
 
 ```bash
 npm install
