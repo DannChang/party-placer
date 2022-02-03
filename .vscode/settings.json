@@ -1,3 +1,4 @@
 {
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\Git-Bash.exe",
   "git.ignoreLimitWarning": true
 }
